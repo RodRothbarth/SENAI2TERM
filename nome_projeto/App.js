@@ -1,114 +1,45 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, { useState } from "react";
+import { View, 
+        StyleSheet, 
+        } from "react-native";
+import Post from "./src/post"
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+const HelloWorld = () => { 
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const [name, setName] = useState("");
+const [mensagem, setMensagem] = useState("");
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                NÃO SEI O QUE FAÇO PRA ESSA MULÉ EU CONQUIXTXA
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>VERY, VERY BIUTIFULLLLLLLLLLLLL! VOCÊ ME DEIXA DOIDJÃO.... </Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+    return (
+        <View style={styles.container}>
+            <Post uri={'https://danielmiessler.com/images/url-uri-url-miessler-2020.png'} texto={escrito}></Post>
+        </View>    
+        )
+ }
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+ const logo = {
+     uri:'http://s2.glbimg.com/Wbzg3io0pmCPhSvIBQGz7gGL3W8=/0x0:1185x700/695x411/s.glbimg.com/po/tt2/f/original/2014/06/11/untitled-5.jpg' 
+ }
 
-export default App;
+ const escrito = "qqr coisa"
+ const styles = StyleSheet.create({
+    container: {
+        paddingTop: 20,
+        flex:1, 
+        },
+       input: {
+           borderWidth:4, 
+           borderColor:'#000', 
+           color:'#000',
+           width: 400,
+           borderRadius:20,
+           textAlign: "center",
+           alignSelf: "center"
+        }
+ })
+
+const helloPessoa = (nome)=>{
+    return "Hello " + nome + "!";
+ }
+ 
+ export default HelloWorld
+

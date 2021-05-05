@@ -1,0 +1,22 @@
+app Cervejaria
+
+- voce tem mais do que 18 anos? yes / no
+
+- promoção
+
+- vitrine (lista de cervejas) carrocel
+
+- rodape 
+
+- busca
+
+- cabeçalho
+
+-maps do google (postos de distribuição)
+
+*cadastro 
+*login
+CRUD
+
+MVP - vitrine com cervejas cadastradas
+CRud - das cervejas 
