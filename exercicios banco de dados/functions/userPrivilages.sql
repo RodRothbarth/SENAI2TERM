@@ -84,15 +84,4 @@ INSERT INTO ITEM_BOLETO (IDITEM_BOLETO, IDBOLETO, IDDEBITO)VALUES(4, 2, 4);
 
 select user, host from mysql.user;
 
-create user 'ADRIANA'@'' identified by '';
-create user 'ALFREDO'@'' identified by '';
-create user 'ANA'@'' identified by '';
-create user 'ANDERSON'@'' identified by '';
-create user 'ANDRESSA'@'' identified by '';
-create user 'BRUNA'@'' identified by '';
-create user 'CARLA'@'' identified by '';
 
-flush privileges;
-
-grant all privileges to '';
-show grants 

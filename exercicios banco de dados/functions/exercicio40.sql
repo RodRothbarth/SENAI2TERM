@@ -1,0 +1,17 @@
+DROP DATABASE IF EXISTS DBLOGALTERACAO;
+CREATE DATABASE DBLOGALTERACAO;
+USE DBLOGALTERACAO;
+
+CREATE TABLE CLIENTE (
+	IDCLIENTE INT NOT NULL AUTO_INCREMENT
+	, NOME VARCHAR(100) NOT NULL
+	, DTNASCIMENTO DATE
+	, PRIMARY KEY(IDCLIENTE)
+);
+ 
+
+create user 'SILVIO'@'%' identified by '123456';
+create user 'MARIA'@'%' identified by '123456';
+create user 'CRISTIANO'@'%' identified by '123456';
+create user 'CARLOS'@'%' identified by '123456';
+create user 'ANTONIO'@'%' identified by '123456';
